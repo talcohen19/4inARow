@@ -4,10 +4,6 @@ import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 import javafx.scene.shape.Rectangle;
 
-/**
- *
- * @author kn
- */
 public class ArrowT extends Path{
     private static final double defaultArrowHeadSize = 5.0;
     
