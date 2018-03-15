@@ -46,3 +46,4 @@
 *.ini
 .metadata/version.ini
 .metadata/version.ini
+/bin/

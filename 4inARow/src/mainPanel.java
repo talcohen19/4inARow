@@ -49,6 +49,7 @@ public class mainPanel extends BorderPane implements FourInARowConst {
 		public ClickPanel() {
 
 			setPadding(new Insets(PADDING));
+			
 			getChildren().add(playerTurn);
 			getChildren().add(playButton);
 			getChildren().add(pauseButton);
