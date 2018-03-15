@@ -11,5 +11,6 @@ public interface FourInARowConst {
 	final String SAMECOLOR_ERR = "cant start game with 2 tokens at the same color", TITLE_BOARD = "The Game Board",
 			STYLE = "-fx-prompt-text-fill: transparent;", TITLE = "4 In Row", START_PLAY_TEXT = "Start Play",
 			TITLE_PAUSE = "pause";
+	final String ARROWIMAGE="Arrow.png",LOGOIMAGE="title.png";
 
 }
