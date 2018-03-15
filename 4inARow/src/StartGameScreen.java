@@ -83,8 +83,8 @@ public class StartGameScreen extends Application implements FourInARowConst {
 	public void start(Stage primaryStage) throws Exception {
 		initzailseDetails();
 		// top
-		ImageView imageView = new ImageView(new Image("title.png"));
-		titlePane = new StackPane(imageView);
+		ImageView logoImage = new ImageView(new Image(LOGOIMAGE));
+		titlePane = new StackPane(logoImage);
 		// center
 		tokensColorsBox = new HBox(SPACEING_TOKEN_COLOR_BOX);
 		colorsPickerBox = new HBox(SPACEING);

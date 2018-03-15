@@ -4,6 +4,8 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -11,15 +13,13 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class mainPanel extends BorderPane implements FourInARowConst {
-
+	ImageView arrow = new ImageView(new Image(ARROWIMAGE));
 	private Board theBoard;
-	private Arrow theArrow = new Arrow();
 	private Player thePlayers[] = new Player[NUM_OF_PLAYERS];
-	private ArrowT arrow=new ArrowT(100, 0, 100, 70,20);
-	private ArrowT2 arrow2=new ArrowT2();
 	private StackPane gameCanvas;
 	private ClickPanel clicksPanel = new ClickPanel();
-
+	private StackPane arrowImage;
+	
 	public mainPanel(Player[] thePlayers) {
 
 		for (int i = 0; i < NUM_OF_PLAYERS; i++) {
@@ -29,10 +29,10 @@ public class mainPanel extends BorderPane implements FourInARowConst {
 		this.theBoard = new Board(this.thePlayers);
 
 		gameCanvas = new StackPane(this.theBoard);
-
+		arrowImage = new StackPane(arrow);
 		this.setCenter(gameCanvas);
 		this.setBottom(clicksPanel);
-		this.setTop(arrow);
+		this.setTop(arrowImage);
 
 
 
@@ -49,6 +49,7 @@ public class mainPanel extends BorderPane implements FourInARowConst {
 		public ClickPanel() {
 
 			setPadding(new Insets(PADDING));
+			
 			getChildren().add(playerTurn);
 			getChildren().add(playButton);
 			getChildren().add(pauseButton);
